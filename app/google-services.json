@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "61422117205",
+    "firebase_url": "https://iotfinalsystem-default-rtdb.firebaseio.com",
+    "project_id": "iotfinalsystem",
+    "storage_bucket": "iotfinalsystem.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:61422117205:android:09cc09d7d3523e7c1a4fdc",
+        "android_client_info": {
+          "package_name": "com.example.waterlevelmonitoringsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "61422117205-sgkuon38lbu1gho1ssp7ntk4tbr7s9th.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZCOEGRjl7Uk_HRN6hOjxK2rfQ2SOEOiM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "61422117205-sgkuon38lbu1gho1ssp7ntk4tbr7s9th.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

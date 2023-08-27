@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pic4"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:text="Hello.."
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/mainpage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:textSize="40px"
+        android:textStyle="bold">\</TextView>
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="150dp"
+        android:layout_height="150px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="232dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="14dp"
+        android:text="LOGOUT"></Button>
+
+    <Button
+        android:id="@+id/btnon"
+        android:layout_width="150dp"
+        android:layout_height="200px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginBottom="48dp"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:backgroundTint="@color/black"
+        android:text="ON" />
+
+    <Button
+        android:id="@+id/btnoff"
+        android:layout_width="150dp"
+        android:layout_height="200px"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="221dp"
+        android:layout_marginBottom="48dp"
+        android:backgroundTint="@color/Red"
+        android:text="OFF"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="559dp"
+        android:text="Motor Power"
+        android:textSize="30dp"
+        android:textStyle="bold">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/txtwaterlevel"
+        android:layout_width="400px"
+        android:layout_height="70dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="50dp"
+        android:gravity="center"
+        android:layout_marginTop="308dp" />
+
+    <TextView
+        android:layout_width="650px"
+        android:layout_height="40dp"
+        android:text="Availble Water Capacity"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textSize="50px"
+        android:textColor="@color/purple_700"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="222dp" />
+
+    <TextView
+        android:layout_width="650px"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="40px"
+        android:gravity="center"
+        android:id="@+id/waterstatus"
+        android:layout_marginBottom="200dp" />
+
+</RelativeLayout>
