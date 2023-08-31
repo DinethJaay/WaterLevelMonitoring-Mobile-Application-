@@ -27,12 +27,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="26dp"
+        android:layout_marginStart="18dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="398dp"
         android:layout_marginRight="30dp"
-        android:hint="Email">
-    </EditText>
+        android:background="@drawable/roundtextview"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
+        android:hint="Email"
+        android:paddingLeft="10dp"></EditText>
 
     <EditText
         android:id="@+id/password"
@@ -41,11 +44,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="25dp"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="415dp"
+        android:layout_marginTop="476dp"
         android:layout_marginRight="30dp"
-        android:hint="Password"></EditText>
+        android:background="@drawable/roundtextview"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="10dp"
+        android:hint="Password"
+        android:paddingLeft="10dp"></EditText>
 
     <Button
         android:id="@+id/btnlogin"

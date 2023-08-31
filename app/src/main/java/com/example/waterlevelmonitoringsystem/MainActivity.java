@@ -30,8 +30,6 @@ public class MainActivity extends AppCompatActivity {
     FirebaseUser user;
     Switch switch1;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

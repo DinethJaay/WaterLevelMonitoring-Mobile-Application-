@@ -19,18 +19,21 @@
         android:textStyle="bold" />
 
     <EditText
+        android:id="@+id/email"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="31dp"
+        android:layout_marginStart="21dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="401dp"
         android:layout_marginRight="30dp"
+        android:background="@drawable/roundtextview"
+        android:drawableLeft="@drawable/user"
+        android:drawablePadding="10dp"
         android:hint="Enter Your Email"
-        android:id="@+id/email">
-    </EditText>
+        android:paddingLeft="10dp"></EditText>
 
     <EditText
         android:id="@+id/password"
@@ -39,11 +42,15 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="31dp"
+        android:layout_marginStart="20dp"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="416dp"
+        android:layout_marginTop="481dp"
         android:layout_marginRight="30dp"
-        android:hint="Enter Your Password"></EditText>
+        android:background="@drawable/roundtextview"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="10dp"
+        android:hint="Enter Your Password"
+        android:paddingLeft="10dp"></EditText>
 
     <Button
         android:id="@+id/btnregistor"
