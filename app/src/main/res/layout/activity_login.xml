@@ -51,6 +51,7 @@
         android:background="@drawable/roundtextview"
         android:drawableLeft="@drawable/password"
         android:drawablePadding="10dp"
+        android:inputType="textPassword"
         android:hint="Password"
         android:paddingLeft="10dp"></EditText>
 

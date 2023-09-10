@@ -23,12 +23,12 @@ import com.google.firebase.database.ValueEventListener;
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
     Button button,buttonOn, buttonOff;
-    TextView textView,textView1,textView2;
+    TextView textView,textView1,textView2,textView3;
 
     DatabaseReference motorControlRef;
 
     FirebaseUser user;
-    Switch switch1;
+   // Switch switch1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOn=findViewById(R.id.btnon);
         buttonOff=findViewById(R.id.btnoff);
         textView2=findViewById(R.id.waterstatus);
+        textView3=findViewById(R.id.txttankcapacity);
         user = auth.getCurrentUser();
 
         motorControlRef = FirebaseDatabase.getInstance().getReference().child("Buttons");
@@ -63,6 +64,9 @@ public class MainActivity extends AppCompatActivity {
                     for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                         String liters = snapshot.child("WaterLevel").getValue().toString();
                         textView1.setText(liters);
+                        String tankcapacity = snapshot.child("emptytankdistance").getValue().toString();
+                        textView3.setText(tankcapacity);
+
                     }
                 }
 
