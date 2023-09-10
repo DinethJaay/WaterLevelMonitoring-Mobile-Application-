@@ -18,6 +18,7 @@
         android:textColor="@color/purple_700"
         android:textStyle="bold" />
 
+
     <TextView
         android:id="@+id/mainpage"
         android:layout_width="wrap_content"
@@ -68,14 +69,15 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="559dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="623dp"
         android:text="Motor Power"
         android:textSize="30dp"
         android:textStyle="bold">
@@ -89,34 +91,48 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="164dp"
-        android:layout_marginEnd="131dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginEnd="137dp"
         android:gravity="center"
         android:textSize="50dp" />
 
+    <com.example.waterlevelmonitoringsystem.GaugeView
+        android:id="@+id/gaugeView"
+        android:layout_width="236dp"
+        android:layout_height="138dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="86dp"
+        android:layout_marginBottom="398dp"
+        android:background="@android:color/transparent" />
+
+
+
     <TextView
-        android:id="@+id/txttankcapacity"
-        android:layout_width="400px"
-        android:layout_height="70dp"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="327dp"
-        android:layout_marginEnd="128dp"
-        android:gravity="center"
-        android:textSize="50dp" />
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="6dp"
+        android:text="Hello.."
+        android:textColor="@color/purple_700"
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="650px"
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="102dp"
+        android:layout_marginTop="91dp"
         android:gravity="center"
         android:text="Availble Water Capacity"
         android:textColor="@color/purple_700"
         android:textSize="50px"
         android:textStyle="bold" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -124,37 +140,23 @@
         android:layout_height="40dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="262dp"
+        android:layout_marginTop="224dp"
         android:gravity="center"
-        android:text="Availble Tank Capacity"
+        android:text="Availble Tank Space"
         android:textColor="@color/purple_700"
         android:textSize="50px"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="127dp"
-        android:layout_height="43dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="347dp"
-        android:layout_marginEnd="56dp"
-        android:gravity="center"
-        android:text="CM"
-        android:textColor="@color/purple_700"
-        android:textSize="50px"
-        android:textStyle="bold" />
-
-    <TextView
+        android:id="@+id/waterstatus"
         android:layout_width="650px"
         android:layout_height="40dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:textStyle="bold"
-        android:textSize="40px"
+        android:layout_marginBottom="284dp"
         android:gravity="center"
-        android:id="@+id/waterstatus"
-        android:layout_marginBottom="200dp" />
+        android:textSize="60px"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

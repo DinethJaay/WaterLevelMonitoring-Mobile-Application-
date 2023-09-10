@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
-import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.play.core.integrity.v;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -19,6 +16,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
 
 public class MainActivity extends AppCompatActivity {
     FirebaseAuth auth;
@@ -42,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         buttonOn=findViewById(R.id.btnon);
         buttonOff=findViewById(R.id.btnoff);
         textView2=findViewById(R.id.waterstatus);
-        textView3=findViewById(R.id.txttankcapacity);
+        //textView3=findViewById(R.id.txttankcapacity);
         user = auth.getCurrentUser();
 
         motorControlRef = FirebaseDatabase.getInstance().getReference().child("Buttons");
@@ -58,24 +56,6 @@ public class MainActivity extends AppCompatActivity {
             DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Watersensors");
             DatabaseReference reference2 = FirebaseDatabase.getInstance().getReference().child("Button");
 
-            reference.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-                        String liters = snapshot.child("WaterLevel").getValue().toString();
-                        textView1.setText(liters);
-                        String tankcapacity = snapshot.child("emptytankdistance").getValue().toString();
-                        textView3.setText(tankcapacity);
-
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-
-            });
             reference2.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -91,6 +71,30 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             });
+            reference.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                        String tankcapacity = snapshot.child("emptytankdistance").getValue().toString();
+                        //textView3.setText(tankcapacity);
+                        String liters = snapshot.child("WaterLevel").getValue().toString();
+                        textView1.setText(liters);
+
+                        // Convert tank capacity to an integer (adjust as needed)
+                        int capacity = Integer.parseInt(tankcapacity);
+
+                        // Update the gauge view
+                        GaugeView gaugeView = findViewById(R.id.gaugeView);
+                        gaugeView.setTankCapacity(capacity);
+                    }
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                    // Handle error
+                }
+            });
+
             // Set switch change listeners to update values in Firebase
 
             buttonOn.setOnClickListener(new View.OnClickListener() {
