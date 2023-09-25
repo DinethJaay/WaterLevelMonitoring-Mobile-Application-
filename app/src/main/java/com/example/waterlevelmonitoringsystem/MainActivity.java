@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         //textView3=findViewById(R.id.txttankcapacity);
         user = auth.getCurrentUser();
 
+        FirebaseDatabase.getInstance().getReference("Button").child("motor").setValue(1); //fff
+
         motorControlRef = FirebaseDatabase.getInstance().getReference().child("Buttons");
         if(user==null)
         {
@@ -101,12 +103,15 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     FirebaseDatabase.getInstance().getReference("Button").child("motorbutton").setValue(1);
+                    FirebaseDatabase.getInstance().getReference("Button").child("motor").setValue(1); //fff
+
                 }
             });
             buttonOff.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     FirebaseDatabase.getInstance().getReference("Button").child("motorbutton").setValue(0);
+                    FirebaseDatabase.getInstance().getReference("Button").child("motor").setValue(0); //ff
                 }
             });
 
